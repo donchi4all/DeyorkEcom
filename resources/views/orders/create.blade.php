@@ -81,7 +81,7 @@
                      
                               <div class="col-md-12">
                                 <span id="loader"><i class="fa fa-spinner fa-3x fa-spin"></i></span>
-                             <p><input type="checkbox"> Check if you want to user your Previous billing info.</p> 
+                             <p><input id="saveshippingInfo" type="checkbox"> Check if you want to use your Previous billing info.</p> 
 
                             </div>
                             
@@ -176,13 +176,13 @@
   
  <script type="text/javascript">
 	$(document).ready(function(){
-        $('input[type="checkbox"]').click(function(){
+        $('#saveshippingInfo').click(function(){
             if($(this).prop("checked") == true){
 
                  var department_id = {{Auth::user()->id}}
                  
                  $.ajax({
-                url:  '/myform/ajax/'+department_id,
+                url:  '/orders/shipping/'+department_id,
                 type:"GET",
                 dataType:"json",
                 beforeSend: function(){
