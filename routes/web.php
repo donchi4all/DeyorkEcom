@@ -59,6 +59,6 @@ Route::resource('user', 'UsersController')->except(['show','Edit']);
 
 Route::resource('setting', 'SettingsController');
 
-Route::get('myform/ajax/{id}',array('as'=>'myform.ajax','uses'=>'OrdersController@myformAjax'));
+Route::get('orders/shipping/{id}',array('as'=>'orders.shipping','uses'=>'OrdersController@createShipping'));
 Route::get('order/status/{id}/{status}',array('as'=>'order.status','uses'=>'OrdersController@changeStatus'));
 });
