@@ -11,7 +11,9 @@
 |
 */
 
+//set register to true if you want to enable admin first registration
 Auth::routes(['register' => false]);
+
 
 // Auth::routes();
 
