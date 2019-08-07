@@ -252,7 +252,7 @@ class OrdersController extends Controller
         if(empty($shipping)){
     
 
- $shipping = Shipping::create([
+          $shipping = Shipping::create([
                'user_id' => auth()->user() ? auth()->user()->id : null,
                'firstname' => $request->firstname,
                'lastname' => $request->lastname,
@@ -273,7 +273,7 @@ $shipping->update($request->all());
 
 
     //load the save data
-        public function myformAjax($id)
+        public function createShipping($id)
     {
 
         $shipping =Shipping::where('user_id',$id)->first();  
