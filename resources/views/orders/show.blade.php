@@ -166,33 +166,22 @@
                 type:"GET",
                 dataType:"json",
                 beforeSend: function(){
-                    // $('#loader').css("visibility", "visible");
+                  
                 },
 
                 success:function(data) {
 
                  
-                //   $("#firstname").val(data["firstname"]);
-                //   $("#lastname").val(data["lastname"]);
-                //   $("#email").val(data["email"]);
-                //   $("#phone_number").val(data["phone_number"]);
-                //   $("#address").val(data["address"]);
-                //   $("#state").val(data["state"]);
                
                 },
                 complete: function(){
-                    // $('#loader').css("visibility", "hidden");
+                  
                 }
             });
                                     
             }
             else if($(this).prop("checked") == false){
-                // $("#firstname").val("");
-                //   $("#lastname").val("");
-                //   $("#email").val("");
-                //   $("#phone_number").val("");
-                //   $("#address").val("");
-                //   $("#state").val("");
+               
                 
             }
         });
