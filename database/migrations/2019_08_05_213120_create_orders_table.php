@@ -23,8 +23,8 @@ class CreateOrdersTable extends Migration
             $table->longText('shipping_info');
             $table->enum('status',['new','shipped','delivered','cancelled','returned']);
             $table->string('quantity');
-            $table->integer('subtotal',100)->default(0);
-            $table->integer('total',100)->default(0);
+            $table->decimal('subtotal',20,2)->default('0.00');
+            $table->decimal('total',20,2)->default('0.00');
             $table->timestamps();
         });
     }
