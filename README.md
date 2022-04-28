@@ -1,5 +1,5 @@
 # DeyorkEcom
-E commerce model on laravel 5.8
+E commerce model on laravel 6
 
 ![Login image](https://github.com/donchi4all/DeyorkEcom/blob/master/public/images/login.png)
 
