@@ -23,7 +23,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'OrdersController@index');
 
     Route::resource('order', 'OrdersController');
-    
+
 
     Route::get('logout', function (){
         Auth::logout();
@@ -40,14 +40,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('tracking', 'TrackingsController@index')->name('track.index');
     Route::get('tracking/search/{order_code}', 'TrackingsController@tracking')->name('track.tracking');
-   
+
 
     Route::get('order/print/{id}', 'OrdersController@print')->name('order.print');
     Route::get('password', 'OrdersController@processing')->name('order.processing');
-   
+
     Route::get('/addTocart', 'OrdersController@add_cart')->name('order.cart');
 
- 
+
 Route::resource('user', 'UsersController')->except(['show','Edit']);
 
 
